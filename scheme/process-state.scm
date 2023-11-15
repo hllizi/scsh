@@ -130,7 +130,8 @@
            (lambda ()
              (change-and-cache-cwd new-cwd)
              (cwd-cache)))))
-    (let-cwd changed-cwd thunk)))
+    (let-cwd changed-cwd thunk)
+    (thread-set-cwd! (cwd-cache))))
 
 ;; Align the value of the Unix cwd with scsh's value.
 ;; Since another thread could disalign, this call and
