@@ -329,9 +329,9 @@
              (if (not script-loaded?) ; There wasn't a -ds, -dm, or -de,
                  (if (eq? term-switch 's) ; but there is a script,
                      (begin 
+                       (display term-val)
                        (load-quietly term-val; so load it now.
                                    interaction-env)
-                       (display term-val)
                        )))
 
 
