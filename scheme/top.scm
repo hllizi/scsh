@@ -332,7 +332,7 @@
                        (load-quietly term-val; so load it now.
                                    interaction-env)
                        (display term-val)
-                       ))
+                       )))
 
 
              (cond ((not term-switch) ; -- interactive
